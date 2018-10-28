@@ -10,7 +10,7 @@
     
 <script src="https://d3js.org/d3.v5.min.js"></script>
     
-<svg  width=900  height=1000 id="redes" > </svg>
+<svg  width=900  height=950 id="redes" > </svg>
 
 <script>
     //copy drag from: https://bl.ocks.org/msbostock/4062045
@@ -68,7 +68,24 @@
          .on("end",dragended));
     
     selnodes.append("title")
-        .text( d => d.nombre);
+    .html(function (d) {
+         if (d.grupo == "Familiar") {
+              return  d.nombre +" -> "+ "<br></br>" + d.vinculo_agrupado +
+        " -> Número Contratos : "+d.nro_contratos_familiares + "<br></br>" ;
+         } 
+         if (d.grupo == "congresista") {
+              return  d.nombre +" -> "+ "<br></br>" +
+        " -> Número Contratos (vinculo familiar) : "+d.nro_contratos_familiares + "<br></br>" ;
+         } 
+         else
+            {
+            return d.nombre +" -> "+ "<br></br>" +
+        " -> Número Contratos: "+d.nro_contratos_familiares + "<br></br>" ;
+            }
+           
+       }
+            );
+        //.text( d => d.nombre);
       
     function ticked(){
          sellinks.attr("x1", (l) => l.source.x)
@@ -99,6 +116,7 @@
     d.fx = null;
     d.fy = null;
   }
+   
  });
     
 </script>
