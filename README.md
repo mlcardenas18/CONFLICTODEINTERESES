@@ -1,6 +1,6 @@
 # CONFLICTODEINTERESES
 
-Objetivo Generar una visualización que permita explorar las presuntas relaciones entre algunos personajes políticos y sus familiares que presenta contratación con entidades del estado.
+Objetivo Generar una visualización como ejercicio académico que permita explorar las presuntas relaciones entre algunos personajes políticos y sus familiares que presenta contratación con entidades del estado.
 
 Según lo publicado en el portal de Cuestión Publica https://cuestionpublica.com/el-senador-plutocrata/
 
